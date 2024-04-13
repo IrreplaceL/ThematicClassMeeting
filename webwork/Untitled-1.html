@@ -1,0 +1,40 @@
+<!DOCTYPE html>  
+<html lang="en">  
+<head>  
+<meta charset="UTF-8">  
+<meta name="viewport" content="width=device-width, initial-scale=1.0">  
+<title>图片边缘淡化</title>  
+<style>  
+  .image-fade {  
+    position: relative;  
+    width: 300px; /* 设置图片宽度 */  
+    height: 200px; /* 设置图片高度 */  
+    overflow: hidden;  
+  }  
+  
+  .image-fade img {  
+    width: 100%;  
+    height: auto;  
+    display: block;  
+  }  
+  
+  .image-fade::before {  
+    content: "";  
+    position: absolute;  
+    top: 0;  
+    left: 0;  
+    right: 0;  
+    bottom: 0;  
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 100%);  
+    pointer-events: none;  
+  }  
+</style>  
+</head>  
+<body>  
+  
+<div class="image-fade">  
+  <img src="images/scene.jpg" alt="Your Image">  
+</div>  
+  
+</body>  
+</html>
